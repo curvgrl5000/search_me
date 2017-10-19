@@ -16,7 +16,7 @@ export default class LiveSearch extends React.Component {
 
 	update(dataSearch){
 		this.setState({
-			dataSearch : dataSearch
+			dataSearch: dataSearch
 		})
 	}
 
@@ -32,15 +32,15 @@ export default class LiveSearch extends React.Component {
 		console.log(currentSearch);
 		console.log(this.matched(currentSearch, peaks));
 		
-		const characters = peaks.filter(function(character){
+		const lauren_bacall = peaks.filter(function(character){
       return character.name.toLowerCase().search(
         currentSearch.toLowerCase() ) !== -1;
     });
 		
-		/* onChange={this.update.bind(this)
-			onChange={value => this.update(value)}
+		/* onChange={this.update.bind(this)}
+			onChange={value => this.update(value)} // semantics!
 	 		onChange={x => this.update(x)}
-	 		onChange={dummyCopy => this.update(dummCopy)}
+	 		onChange={lauren_bacall => this.update(lauren_bacall)}
 	 		onChange={this.update}
 
 		}*/
@@ -49,9 +49,29 @@ export default class LiveSearch extends React.Component {
 			<div className="searching">
 				<SearchForm
 					value = {this.state.dataSearch}
-					onChange={dummyCopy => this.update(dummyCopy)} />
-				<CharacterList characters={characters} />
+					onChange={value => this.update(value)} />
+				<CharacterList characters={lauren_bacall} />
 			</div>
 		);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
