@@ -3,7 +3,7 @@ import peaks from '../peaks.json';
 
 export default function CharacterList(props) {
 	const characters = props.characters.map((character, index) =>
-		<li key={index}>
+		<li className="listed" key={index}>
 			<strong>{character.name}</strong> ({character.actor}) - 
 			{character.description}</li>
 	);
